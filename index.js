@@ -1,3 +1,13 @@
+let lastScroll = 0;
+
+window.addEventListener("scroll", (e) => {
+  if (window.scrollY < lastScroll) {
+    navbar.style.top = "0px";
+  } else {
+    navbar.style.top = "-60px";
+  }
+  lastScroll = window.scrollY;
+});
 // Créer un événément au scroll
 
 // Cacher la navbar si l'utilisateur comment à descendre et la sortir quand il remonte
